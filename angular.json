@@ -49,9 +49,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "styles": [ "src/styles.sass" ],
             "scripts": []
           },
           "configurations": {
@@ -118,6 +116,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.sass"
             ],
             "scripts": []
@@ -125,5 +124,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "84650120-2575-4e94-9b90-87cc96f6d103"
   }
 }
