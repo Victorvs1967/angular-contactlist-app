@@ -1,1 +1,20 @@
-<p>contact-list works!</p>
+<mat-card class="contact">
+  <p>{{ contactList.length }} contact{{ contactList.length === 1 ? '' : 's' }}</p>
+  <mat-list>
+    <mat-list-item *ngFor="let item of contactList; let index = index">
+      <mat-icon matListIcon> person </mat-icon>
+      <h3 matLine>{{ item.firstName }} {{ item.lastName }}</h3>
+      <p matLine>
+        <span> {{ item.phone }}</span>
+        <span class="demo-2"> - {{ item.address }}</span>
+      </p>
+      <button mat-icon-button color="primary" (click)="editContact(item, index)"><mat-icon> edit </mat-icon></button>
+      <button mat-icon-button color="warn" (click)="removeContact(index)"><mat-icon> delete </mat-icon></button>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="newContact()">Mew Contact</button>
+  </mat-card-actions>
+</mat-card>
+<router-outlet></router-outlet>
